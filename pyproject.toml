@@ -4,6 +4,12 @@ version = "0.1.0"
 description = ""
 authors = ["Kent Friesen <kfreezen@gmail.com>"]
 readme = "README.md"
+packages = [
+    { include='included_repo', from='src' }
+]
+exclude = ['src/included_repo/vendors/**/*.py']
+include = ['src/included_repo/vendors/__init__.py']
+
 
 [tool.poetry.dependencies]
 python = "^3.11"
